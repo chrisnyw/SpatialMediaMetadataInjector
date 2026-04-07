@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18A3277A2F858FC10052C5F2 /* InjectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A327772F858FC10052C5F2 /* InjectorView.swift */; };
+		18A3278C2F858FEA0052C5F2 /* InjectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3278B2F858FEA0052C5F2 /* InjectorViewModel.swift */; };
+		18A3277B2F858FC10052C5F2 /* MetadataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A327782F858FC10052C5F2 /* MetadataUtils.swift */; };
+		18A3277C2F858FC10052C5F2 /* SpatialMediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A327792F858FC10052C5F2 /* SpatialMediaApp.swift */; };
+		18A327842F858FEA0052C5F2 /* MP4File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A327812F858FEA0052C5F2 /* MP4File.swift */; };
+		18A327852F858FEA0052C5F2 /* MP4Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3277F2F858FEA0052C5F2 /* MP4Box.swift */; };
+		18A327862F858FEA0052C5F2 /* SV3DBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A327832F858FEA0052C5F2 /* SV3DBoxes.swift */; };
+		18A327872F858FEA0052C5F2 /* MP4Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A327802F858FEA0052C5F2 /* MP4Container.swift */; };
+		18A327882F858FEA0052C5F2 /* BinaryIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3277D2F858FEA0052C5F2 /* BinaryIO.swift */; };
+		18A327892F858FEA0052C5F2 /* SA3DBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A327822F858FEA0052C5F2 /* SA3DBox.swift */; };
+		18A3278A2F858FEA0052C5F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3277E2F858FEA0052C5F2 /* Constants.swift */; };
+		AA000000000000000000004A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000003A /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18A327772F858FC10052C5F2 /* InjectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorView.swift; sourceTree = "<group>"; };
+		18A3278B2F858FEA0052C5F2 /* InjectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorViewModel.swift; sourceTree = "<group>"; };
+		18A327782F858FC10052C5F2 /* MetadataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataUtils.swift; sourceTree = "<group>"; };
+		18A327792F858FC10052C5F2 /* SpatialMediaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialMediaApp.swift; sourceTree = "<group>"; };
+		18A3277D2F858FEA0052C5F2 /* BinaryIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryIO.swift; sourceTree = "<group>"; };
+		18A3277E2F858FEA0052C5F2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		18A3277F2F858FEA0052C5F2 /* MP4Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP4Box.swift; sourceTree = "<group>"; };
+		18A327802F858FEA0052C5F2 /* MP4Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP4Container.swift; sourceTree = "<group>"; };
+		18A327812F858FEA0052C5F2 /* MP4File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP4File.swift; sourceTree = "<group>"; };
+		18A327822F858FEA0052C5F2 /* SA3DBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SA3DBox.swift; sourceTree = "<group>"; };
+		18A327832F858FEA0052C5F2 /* SV3DBoxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SV3DBoxes.swift; sourceTree = "<group>"; };
+		AA0000000000000000000011 /* SpatialMediaMetadataInjector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpatialMediaMetadataInjector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA000000000000000000003A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA000000000000000000003B /* SpatialMediaMetadataInjector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpatialMediaMetadataInjector.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA0000000000000000000021 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA0000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000003 /* SpatialMediaMetadataInjector */,
+				AA0000000000000000000005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000003 /* SpatialMediaMetadataInjector */ = {
+			isa = PBXGroup;
+			children = (
+				18A327772F858FC10052C5F2 /* InjectorView.swift */,
+				18A3278B2F858FEA0052C5F2 /* InjectorViewModel.swift */,
+				18A327782F858FC10052C5F2 /* MetadataUtils.swift */,
+				18A327792F858FC10052C5F2 /* SpatialMediaApp.swift */,
+				AA0000000000000000000004 /* MPEG */,
+				AA000000000000000000003A /* Assets.xcassets */,
+				AA000000000000000000003B /* SpatialMediaMetadataInjector.entitlements */,
+			);
+			path = SpatialMediaMetadataInjector;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000004 /* MPEG */ = {
+			isa = PBXGroup;
+			children = (
+				18A3277D2F858FEA0052C5F2 /* BinaryIO.swift */,
+				18A3277E2F858FEA0052C5F2 /* Constants.swift */,
+				18A3277F2F858FEA0052C5F2 /* MP4Box.swift */,
+				18A327802F858FEA0052C5F2 /* MP4Container.swift */,
+				18A327812F858FEA0052C5F2 /* MP4File.swift */,
+				18A327822F858FEA0052C5F2 /* SA3DBox.swift */,
+				18A327832F858FEA0052C5F2 /* SV3DBoxes.swift */,
+			);
+			path = MPEG;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000011 /* SpatialMediaMetadataInjector.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA0000000000000000000010 /* SpatialMediaMetadataInjector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0000000000000000000061 /* Build configuration list for PBXNativeTarget "SpatialMediaMetadataInjector" */;
+			buildPhases = (
+				AA0000000000000000000020 /* Sources */,
+				AA0000000000000000000021 /* Frameworks */,
+				AA0000000000000000000022 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpatialMediaMetadataInjector;
+			productName = SpatialMediaMetadataInjector;
+			productReference = AA0000000000000000000011 /* SpatialMediaMetadataInjector.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA0000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AA0000000000000000000010 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = AA0000000000000000000060 /* Build configuration list for PBXProject "SpatialMediaMetadataInjector" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA0000000000000000000002;
+			productRefGroup = AA0000000000000000000005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA0000000000000000000010 /* SpatialMediaMetadataInjector */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA0000000000000000000022 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000000000000000000004A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA0000000000000000000020 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A3277A2F858FC10052C5F2 /* InjectorView.swift in Sources */,
+				18A3278C2F858FEA0052C5F2 /* InjectorViewModel.swift in Sources */,
+				18A3277B2F858FC10052C5F2 /* MetadataUtils.swift in Sources */,
+				18A3277C2F858FC10052C5F2 /* SpatialMediaApp.swift in Sources */,
+				18A327842F858FEA0052C5F2 /* MP4File.swift in Sources */,
+				18A327852F858FEA0052C5F2 /* MP4Box.swift in Sources */,
+				18A327862F858FEA0052C5F2 /* SV3DBoxes.swift in Sources */,
+				18A327872F858FEA0052C5F2 /* MP4Container.swift in Sources */,
+				18A327882F858FEA0052C5F2 /* BinaryIO.swift in Sources */,
+				18A327892F858FEA0052C5F2 /* SA3DBox.swift in Sources */,
+				18A3278A2F858FEA0052C5F2 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AA0000000000000000000050 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AA0000000000000000000051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AA0000000000000000000052 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SpatialMediaMetadataInjector/SpatialMediaMetadataInjector.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SpatialMediaMetadataInjector;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AA0000000000000000000053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SpatialMediaMetadataInjector/SpatialMediaMetadataInjector.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SpatialMediaMetadataInjector;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA0000000000000000000060 /* Build configuration list for PBXProject "SpatialMediaMetadataInjector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000050 /* Debug */,
+				AA0000000000000000000051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA0000000000000000000061 /* Build configuration list for PBXNativeTarget "SpatialMediaMetadataInjector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000052 /* Debug */,
+				AA0000000000000000000053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA0000000000000000000001 /* Project object */;
+}
