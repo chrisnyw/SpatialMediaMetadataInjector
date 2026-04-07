@@ -13,6 +13,11 @@ Built for creators working with spherical video, stereoscopic 3D, and spatial au
 - **Remove** all spatial metadata from a file
 - Non-destructive: always writes to a new output file
 
+## Screenshot
+
+<img width="855" height="586" alt="Screenshot 2026-04-07 at 12 28 45 PM" src="https://github.com/user-attachments/assets/0774dd65-466a-4153-9348-b61d2e6600ed" />
+
+
 ## Supported Metadata
 
 | Type | Format | Details |
