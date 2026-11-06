@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Darwin
 
 // MARK: - Constants
 
@@ -625,6 +626,11 @@ func parseMetadata(inputURL: URL,
 
 func removeMetadata(inputURL: URL, outputURL: URL,
                     console: @escaping (String) -> Void) -> Bool {
+    let outputAccessing = outputURL.startAccessingSecurityScopedResource()
+    defer {
+        if outputAccessing { outputURL.stopAccessingSecurityScopedResource() }
+    }
+
     guard let inputFH = FileHandle(forReadingAtPath: inputURL.path) else {
         console("Error: cannot open input file")
         return false
@@ -681,11 +687,7 @@ func removeMetadata(inputURL: URL, outputURL: URL,
     console("Removed spatial metadata")
     _ = parseSphericalMPEG4(mp4: mp4, inputFH: inputFH, console: console)
 
-    FileManager.default.createFile(atPath: outputURL.path, contents: nil)
-    guard let outputFH = FileHandle(forWritingAtPath: outputURL.path) else {
-        console("Error: cannot create output file")
-        return false
-    }
+    guard let outputFH = createOutputFile(at: outputURL, console: console) else { return false }
     defer { outputFH.closeFile() }
 
     mp4.saveFile(inputFH: inputFH, outputFH: outputFH)
@@ -695,6 +697,11 @@ func removeMetadata(inputURL: URL, outputURL: URL,
 func injectMetadata(inputURL: URL, outputURL: URL,
                     metadata: InjectionMetadata,
                     console: @escaping (String) -> Void) -> Bool {
+    let outputAccessing = outputURL.startAccessingSecurityScopedResource()
+    defer {
+        if outputAccessing { outputURL.stopAccessingSecurityScopedResource() }
+    }
+
     guard let inputFH = FileHandle(forReadingAtPath: inputURL.path) else {
         console("Error: cannot open input file")
         return false
@@ -743,13 +750,26 @@ func injectMetadata(inputURL: URL, outputURL: URL,
     _ = parseSphericalMPEG4(mp4: mp4, inputFH: inputFH, console: console)
 
     // Write output file
-    FileManager.default.createFile(atPath: outputURL.path, contents: nil)
-    guard let outputFH = FileHandle(forWritingAtPath: outputURL.path) else {
-        console("Error: cannot create output file")
-        return false
-    }
+    guard let outputFH = createOutputFile(at: outputURL, console: console) else { return false }
     defer { outputFH.closeFile() }
 
     mp4.saveFile(inputFH: inputFH, outputFH: outputFH)
     return true
+}
+
+/// Creates or truncates the user-selected output file and preserves the actual
+/// filesystem error in the processing log when sandbox access or permissions fail.
+private func createOutputFile(at url: URL,
+                              console: @escaping (String) -> Void) -> FileHandle? {
+    let descriptor = url.path.withCString {
+        Darwin.open($0, O_WRONLY | O_CREAT | O_TRUNC,
+                    mode_t(S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH))
+    }
+    guard descriptor >= 0 else {
+        let errorCode = errno
+        let fileError = POSIXError(POSIXErrorCode(rawValue: errorCode) ?? .EIO)
+        console("Error: cannot open output file at \(url.path): \(fileError.localizedDescription) (errno \(errorCode))")
+        return nil
+    }
+    return FileHandle(fileDescriptor: descriptor, closeOnDealloc: true)
 }
